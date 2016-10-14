@@ -7,8 +7,7 @@ public class Calculator {
 			return 0;
 		}
 		else{
-			text.replaceAll("\n", ",")
-			String numList[] = splitNumbers(text, ",");
+			String numList[] = splitNumbers(text, ",|\n");
 			return sum(numList);
 		}
 	}
