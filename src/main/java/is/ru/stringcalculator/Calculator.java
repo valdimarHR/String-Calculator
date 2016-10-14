@@ -31,13 +31,14 @@ public class Calculator {
         		else
         			negString += ("," + number);
         	}
-		    total += toInt(number);
+        	if(toInt(number) < 1000)
+		    	total += toInt(number);
 		}
 
 		if(!negString.equals("")){
 			throw new IllegalArgumentException("Negatives not allowed: " + negString);
 		}
-		
+
 		return total;
     }
 }
