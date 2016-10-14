@@ -6,11 +6,25 @@ public class Calculator {
 		if(text.equals("")){
 			return 0;
 		}
-		else
-			return toInt(text);
+		else{
+			String numList[] = splitNumbers(text, ",");
+			return sum(numList);
+		}
 	}
 
 	private static int toInt(String number){
 		return Integer.parseInt(number);
 	}
+
+	private static String[] splitNumbers(String numbers, String divider){
+	    return numbers.split(divider);
+	}
+
+	private static int sum(String[] numbers){
+ 	    int total = 0;
+        for(String number : numbers){
+		    total += toInt(number);
+		}
+		return total;
+    }
 }

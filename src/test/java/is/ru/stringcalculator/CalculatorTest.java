@@ -18,4 +18,9 @@ public class CalculatorTest {
 	public void testOneNumber() {
 		assertEquals(1, Calculator.add("1"));
 	}
+
+	@Test
+	public void testTwoNumbers(){
+		assertEquals(3, Calculator.add("1,2"));
+	}
 }
